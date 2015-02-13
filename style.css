@@ -1,0 +1,16 @@
+div {
+	width: 500px;
+	margin: 0 auto;
+	border-top: 1px solid black;
+}
+
+.handle {
+	font: 16px helvetica;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.message {
+	font: 14px helvetica;
+	margin-top: 5px;
+}
