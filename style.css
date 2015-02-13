@@ -1,18 +1,47 @@
+button {
+	display: block;
+	margin: 20px auto;
+	width: 500px;
+	height: 50px;
+	background-color: #178fec;
+}
+
 div {
 	width: 500px;
 	margin: 0 auto;
 	border-top: 1px solid black;
+	position: relative;
 }
 
 .handle {
 	font: 16px helvetica;
 	font-weight: bold;
 	margin-bottom: 5px;
+	/*border: 1px solid blue;*/
+	width: 50%;
+
+	
 
 }
 
 .message {
-	font: 14px helvetica;
+	font: 14px/16px helvetica;
 	margin-top: 5px;
+	/*border: 1px solid green;*/
+
 	
+}
+
+.time {
+	
+	color: #028598;
+	float: right;
+	margin-top: 10px;
+	/*border: 1px solid red;*/
+	display: block;
+	width: 50%;
+	
+
+	
+
 }
