@@ -6,6 +6,7 @@ body {
 	background: linear-gradient(to top right, green, white);
 	background-repeat: no-repeat;
 	background-size: 100% 120%;
+	height: 100%;
 }
 
 button {
@@ -38,11 +39,17 @@ input[type="submit"] {
 	color: white;
 } 
 
+#container {
+	height: 100%;
+}
+
 #tweets {
 	background-color: white;
 	width: 500px;
 	margin: 0 auto;
 	padding: 10px;
+	overflow: scroll;
+	max-height: 80%;
 }
 
 .tweet {

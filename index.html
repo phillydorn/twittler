@@ -22,7 +22,7 @@
                         <input type="text" id="tweetText" placeholder = "Twittle something!"></input>\
                         <input type="submit" value="Twittle">\
                       </form>') // Enables user to tweet
-        $body.append('<div id="tweets"></div>');
+        $body.append('<div id="container"><div id="tweets"></div></div>');
 
         var formatTweet = function(tweet) {//takes all the information in the tweet 
                                             //object and makes it readable
