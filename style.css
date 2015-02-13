@@ -6,9 +6,29 @@ button {
 	background-color: #178fec;
 }
 
-div {
+button:hover, input[type="submit"]:hover{
+	border: 2px solid black;
+}
+
+.addTweet {
+	width: 500px;
+	margin: 0 auto 10px;
+}
+
+input {
+	margin: 5px;
+}
+
+input[type="submit"] {
+	background-color: #5186af;
+	border-radius: 3px;
+	color: white;
+} 
+
+.tweet {
 	width: 500px;
 	margin: 0 auto;
+	padding-top: 5px;
 	border-top: 1px solid black;
 	position: relative;
 }
@@ -19,9 +39,13 @@ div {
 	margin-bottom: 5px;
 	/*border: 1px solid blue;*/
 	width: 50%;
+	text-decoration: none;
+	color: black;
+}
 
-	
-
+ a:hover {
+	color: #028598;
+	text-decoration: underline;
 }
 
 .message {
