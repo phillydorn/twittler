@@ -40,8 +40,9 @@ div {
 	/*border: 1px solid red;*/
 	display: block;
 	width: 50%;
-	
 
-	
+}
 
+.hide {
+	display: none;
 }

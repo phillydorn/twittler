@@ -22,32 +22,41 @@
                                             //object and makes it readable
             
             
-           var $tweet = $('<div></div>');
-          $tweet.append('<p class="time">Tweeted ' + prettyDate(tweet.created_at) + "</p><h1 class='handle'>@" + tweet.user + "</h1><p class='message'>" + tweet.message + "</p>");
+           var $tweet = $('<div class="tweet"></div>');
+          $tweet.append('<p class="time">Tweeted ' + prettyDate(tweet.created_at) + "</p><a class = 'handle' href = '#'>@" + tweet.user + "</a><p class='message'>" + tweet.message + "</p>");
           return $tweet;
         }
 
        
         totalTweets=0;
 
-        var getTweets = function () { //Retrieves all new tweets
-        var index = streams.home.length - 1,
-        startIndex=index;
-        while(index >= totalTweets){
-          var tweet = streams.home[index];
+        var getTweets = function (stream,start) { //Retrieves all new tweets
+        var index = start;
+        while(index < stream.length){
+          var tweet = stream[index];
          
          var $tweet = formatTweet(tweet); 
           $('#tweets').prepend($tweet); //inserts them at the top after the button
-          index -= 1;
+          index += 1;
         }
-        totalTweets = startIndex;
+        if (totalTweets < stream.length) {
+        totalTweets = stream.length;
+      }
       }
 
-      getTweets(); //initial 10 tweets as the page loads
+      getTweets(streams.home,0, totalTweets); //initial 10 tweets as the page loads
+      
 
-        $('button').click(getTweets); // gets new tweets every time the button is clicked
+        $('button').click(function(event) {getTweets(streams.home, totalTweets)}); // gets new tweets every time the button is clicked
 
-
+      $(function(){
+        $(document).on('click', 'a',(function(){
+          var user = $(this).text();
+          user = user.slice(1);
+          $('.tweet').addClass('hide');
+          getTweets(streams.users[user],0);
+  }));
+});
       });
 
     </script>
