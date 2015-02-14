@@ -16,9 +16,10 @@
         
         $body.html('');
         //Add a button at the top to refresh tweets
-        $body.append('<button type = "button">Click for more tweets</button>')
+        $body.append('<h1>Welcome to Twittler!</h1>')
+        $body.append('<button type = "button">Click for more twittles</button>')
         $body.append('<form class = "addTweet">\
-                        <input type="text" id="visitorInput" placeholder = "username"></input>\
+                        <p>@</p><input type="text" id="visitorInput" placeholder = "username"></input>\
                         <input type="text" id="tweetText" placeholder = "Twittle something!"></input>\
                         <input type="submit" value="Twittle">\
                       </form>') // Enables user to tweet
@@ -29,7 +30,7 @@
             
             
            var $tweet = $('<div class="tweet"></div>');
-          $tweet.append('<p class="time">Tweeted ' + prettyDate(tweet.created_at) + "</p><a class = 'handle' href = '#'>@" + tweet.user + "</a><p class='message'>" + tweet.message + "</p>");
+          $tweet.append('<p class="time">Twittled ' + prettyDate(tweet.created_at) + "</p><a class = 'handle' href = '#'>@" + tweet.user + "</a><p class='message'>" + tweet.message + "</p>");
           return $tweet;
         }
 
