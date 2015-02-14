@@ -88,6 +88,8 @@ input[type="submit"] {
 	font: 16px helvetica;
 	font-weight: bold;
 	margin-bottom: 5px;
+	padding-top: 10px;
+	display: block;
 	/*border: 1px solid blue;*/
 	width: 50%;
 	text-decoration: none;
@@ -101,7 +103,10 @@ input[type="submit"] {
 
 .message {
 	font: 14px/16px helvetica;
-	margin-top: 5px;
+	margin-top: 10px;
+	position: relative;
+	top: -.4em;
+	right: -1em;
 	/*border: 1px solid green;*/
 
 	
@@ -112,9 +117,12 @@ input[type="submit"] {
 	color: #028598;
 	float: right;
 	margin-top: 10px;
+	margin-bottom: 0;
 	/*border: 1px solid red;*/
 	display: block;
 	width: 50%;
+	position: relative;
+	top: -.25em;
 
 }
 
